@@ -5,7 +5,7 @@ import pika
 def callback(ch, method, properties, body):
     print(" [x] Received %r" % body)
 # 建立一个rabbitmq的连接
-connection = pika.BlockingConnection(pika.ConnectionParameters('47.97.102.218:5672'))
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost:5672'))
 
 channel = connection.channel()
 
