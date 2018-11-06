@@ -2,7 +2,7 @@
 import pika
 
 # 建立一个rabbitmq的连接
-connection = pika.BlockingConnection(pika.ConnectionParameters('http://47.97.102.218:5672'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='http://47.97.102.218:5672'))
 channel = connection.channel()
 
 # 创建一个hello的队列将消息存入这个队列
